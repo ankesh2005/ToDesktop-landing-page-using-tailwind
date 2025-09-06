@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer base{
+  body{
+    font-family: 'inter',sans-serif;
+  }
+  h1,h2,h3{
+    font-family: 'poppins',sans-serif;
+    color: #1f2937; /* Tailwind's text-gray-800 */
+    font-weight: 500; /* Tailwind's font-medium */
+  }
+  .container{
+    @apply px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 lg:mt-10;
+  }
+  .anchor-hover{
+    @apply border-b border-dotted border-y-gray-300 hover:border-solid hover:border-gray-500 ;
+  }
+  .gradient-hover-outer{
+    @apply p-[1px] bg-slate-100 hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200;;
+  }
+  .gradient-hover-inner{
+    @apply bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50;
+  }
+  .h2-style{
+    @apply text-5xl leading-normal sm:font-semibold max-w-[450px];
+    
+  }
+
+}
+
+@layer utilities{
+  .text-primary {
+    color: #3238f2;
+  }
+  .bg-primary{
+    background-color: #3238f2;
+  }
+
+  .hover\:text-primary:hover {
+    color: #3238f2;
+  }
+  .font-display{
+    font-family: 'poppins',sans-serif;
+  }
+  .font-body{
+    font-family: 'inter',sans-serif;
+  }
+}
